@@ -1,0 +1,112 @@
+#heading
+  font-family: cursive
+  padding: 50px 50px 50px
+
+#blog_background
+
+  background: url("/static/DSC0387.jpg")
+
+
+.blogj
+
+  background: url("/static/background.jpg")
+  color: #fdfff2
+
+h3
+  color: #e2c89e
+h1
+  color: #e2c89e
+
+p
+  color: #e2c89e
+
+.well
+  height: 200px
+  width: 800px
+
+dt
+  color: #e2c89e
+dl
+  padding: 50px 50px 70px 50px
+
+#loginbg
+  background-color: #b0832e
+
+#ljb
+  background-color: #553712
+
+body
+  padding-top: 50px
+
+.player
+  align-content: center
+  background-color: #2d7671
+
+
+$bgDefault      : #3f497c
+$bgHighlight    : #401619
+$colDefault     : #ecf0f1
+$colHighlight   : #401619
+$dropDown       : false
+.navbar-custom
+  background-color: $bgDefault
+  border-color: $bgHighlight
+  .navbar-brand
+    color: $colDefault
+    &:hover, &:focus
+      color: $colHighlight
+  .navbar-text
+    color: $colDefault
+  .navbar-nav
+    > li
+      > a
+        color: $colDefault
+        &:hover, &:focus
+          color: $colHighlight
+      @if $dropDown
+        > .dropdown-menu
+          background-color: $bgDefault
+          > li
+            > a
+              color: $colDefault
+              &:hover, &:focus
+                color: $colHighlight
+                background-color: $bgHighlight
+            > .divider
+              background-color: $bgHighlight
+    @if $dropDown
+      .open .dropdown-menu > .active
+        > a, > a:hover, > a:focus
+          color: $colHighlight
+          background-color: $bgHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+    > .open
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+  .navbar-toggle
+    border-color: $bgHighlight
+    &:hover, &:focus
+      background-color: $bgHighlight
+    .icon-bar
+      background-color: $colDefault
+  .navbar-collapse,
+  .navbar-form
+    border-color: $colDefault
+  .navbar-link
+    color: $colDefault
+    &:hover
+      color: $colHighlight
+@media (max-width: 767px)
+  .navbar-default .navbar-nav .open .dropdown-menu
+    > li > a
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight

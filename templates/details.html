@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% extends 'Blog/base.html' %}
+    <meta charset="UTF-8">
+    {% block title %}{{ topic.title_topic }}{% endblock %}
+</head>
+{% block body %}
+<div class="bl">
+    <div class="jumbotron details" id="top">
+    <div class="container-fluid">
+         <h1>{{ topic.title_topic }} </h1>
+        <a class="btn btn-primary" role="button" href="{% url 'blog:topic-update' topic.id %}"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Topic</a>
+        {% comment %}<a role="button" href="{% url 'blog:blog-add' topic.id%}" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> &nbsp;New Blog</a>{% endcomment %}
+
+    </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            {% for bl in topic.blg_set.all %}
+            <div class="col-xs-12">
+                <img class="img-circle im2" src="{{ topic.image.url }}"><br>
+                <div  class="well well-sm" style="max-width: 300px">
+                    {{ bl.title_blg }}
+                </div>
+                <pre>
+ {{ bl.context }}
+                       </pre>
+
+                 {% if bl.upload %}
+                      <audio controls>
+                              <source src="{{ bl.upload.url }}" type="audio/mpeg">
+                         </audio>
+                      <img class="img-responsive img-thumbnail" src="{{ bl.upload.url }}" width="200px" height="200px">
+                     <br>
+                     <br>
+                      {% endif %}
+            <form action="{% url "blog:blog-delete" bl.id%}" method="post" style="display: inline;">
+                          {% csrf_token %}
+                         <input type="hidden" name="{{ topics.id }}" value="{{ topics.id}}"/>
+                        <button class="btn btn-danger btn-sm" type="submit" ><span class="glyphicon glyphicon-trash"></span></button>
+                        </form>
+            <a class="btn btn-primary" role="button" href="{% url 'blog:blog-update' bl.id%}"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Blog</a>
+
+            </div>
+              <!--  <div class="col-md-6">
+                     <div class="panel-body panel-primary">
+                       <blockquote style="background: ivory">
+                        <h4>Quotes<br><br></h4>
+                      </blockquote>
+                     </div>
+                </div>-->
+            {% endfor %}
+        </div>
+    <br><br><br><br><br>
+     <a role="button" class="btn btn-info" href="#top"><span class="glyphicon glyphicon-chevron-up"></span>&nbsp;Back to Top </a>
+    </div>
+
+
+{#<img id='d'src="{{ topic.image }}" alt="topic.title_topic" width="100px" height="100px">#}
+{#      {% csrf_token %}#}
+{#      {% for bl in topic.blg_set.all %}#}
+{#          <h2>{{bl.title_blg}}</h2>#}
+{#          <br>#}
+{#          <p>{{ bl.context }}</p>#}
+{#      {% endfor %}#}
+{% endblock %}
+</div>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Blogs{% endblock %}
+{% block body %}
+<body>
+<div class="col-xs-3 offset-xs-09">
+   <audio controls class="jumbotron player">
+       <source src="{{url_for('download_file', filename='')}}{{filename}}" type="audio/ogg">
+       <source src="{{url_for('download_file', filename='')}}{{filename}}" type="audio/mpeg">
+
+   </audio>
+</div>
+</body>
+
+{% endblock %}

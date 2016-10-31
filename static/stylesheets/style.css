@@ -1,0 +1,86 @@
+#heading {
+  font-family: cursive;
+  padding: 50px 50px 50px; }
+
+#blog_background {
+  background: url("/static/DSC0387.jpg"); }
+
+.blogj {
+  background: url("/static/background.jpg");
+  color: #fdfff2; }
+
+h3 {
+  color: #e2c89e; }
+
+h1 {
+  color: #e2c89e; }
+
+p {
+  color: #e2c89e; }
+
+.well {
+  height: 200px;
+  width: 800px; }
+
+dt {
+  color: #e2c89e; }
+
+dl {
+  padding: 50px 50px 70px 50px; }
+
+#loginbg {
+  background-color: #b0832e; }
+
+#ljb {
+  background-color: #553712; }
+
+body {
+  padding-top: 50px; }
+
+.player {
+  align-content: center;
+  background-color: #2d7671; }
+
+.navbar-custom {
+  background-color: #3f497c;
+  border-color: #401619; }
+  .navbar-custom .navbar-brand {
+    color: #ecf0f1; }
+    .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus {
+      color: #401619; }
+  .navbar-custom .navbar-text {
+    color: #ecf0f1; }
+  .navbar-custom .navbar-nav > li > a {
+    color: #ecf0f1; }
+    .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+      color: #401619; }
+  .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus {
+    color: #401619;
+    background-color: #401619; }
+  .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a:hover, .navbar-custom .navbar-nav > .open > a:focus {
+    color: #401619;
+    background-color: #401619; }
+  .navbar-custom .navbar-toggle {
+    border-color: #401619; }
+    .navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+      background-color: #401619; }
+    .navbar-custom .navbar-toggle .icon-bar {
+      background-color: #ecf0f1; }
+  .navbar-custom .navbar-collapse,
+  .navbar-custom .navbar-form {
+    border-color: #ecf0f1; }
+  .navbar-custom .navbar-link {
+    color: #ecf0f1; }
+    .navbar-custom .navbar-link:hover {
+      color: #401619; }
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1; }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #401619; }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #401619;
+    background-color: #401619; } }
+
+/*# sourceMappingURL=style.css.map */

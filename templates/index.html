@@ -1,0 +1,36 @@
+{% extends 'Blog/base.html' %}
+{% block title %}Blogs{% endblock %}
+{% block body %}
+    <div class="jumbotron index">
+     <div class="container-fluid">
+      <h1>These are the topics</h1>
+     </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            {% for topics in object_list %}
+            <div class="col-md-3 col-lg-3 col-xs-10">
+            <div class="thumbnail">
+                <img id="im1" class="img-responsive img-thumbnail" src="{{ topics.image.url }}" alt="{{ topics.title_topic }}" width="300px%" height="300px">
+                <br>
+                <div class="caption">
+                    <h3>{{ topics.title_topic }}</h3>
+                    <p >Anubhav</p>
+
+                        <a class="btn btn-primary" role="button" href="#" topics.id %}">View</a>
+
+                        <button class="btn btn-danger btn-sm" type="submit" ><span class="glyphicon glyphicon-trash"></span></button>
+                        </form>
+
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+

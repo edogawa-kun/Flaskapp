@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Blogs{% endblock %}
+{% block body %}
+<body>
+
+   {% if fname|length >0%}
+      {% for i in fname %}
+          <a href="{{url_for('play', filename='')}}{{i}}">{{i}}</a>
+      {%endfor%}
+   {%endif%}
+ <p>{{fname|length}}</p>
+
+   {% from "_formhelper.html" import render_field %}
+   <form action="{{url_for('down')}}" method="post" >
+       {{form.csrf_token}}
+       <dl>
+           {% if not arr %}
+           {{render_field(form.search)}}
+           {% else %}
+           choice<br>
+       {% for i in range(arr|length) %}
+        <input type="radio" name="choice" value="{{i}}" > {{arr[i]}}
+       {% endfor %}
+           {{render_field(form.name)}}
+           {% endif %}
+
+       </dl>
+       <p><input type="submit" value="POST!"></p>
+   </form>
+   {% if error %}
+			<p class="error"><strong>Error:</strong>{{error}}</p>
+		{% endif %}
+</body>
+
+{% endblock %}
